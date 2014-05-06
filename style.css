@@ -1,0 +1,212 @@
+header {
+  height: 50px;
+  background: #ededed;
+}
+
+.main {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+/* 弹球CSS3样式*/
+.bounce{
+  position : relative;
+  width : 1.5em;
+  height : 1.5em;
+  border-radius : 50%;
+  background : radial-gradient(top left, #EEE, #333 60%);
+  /*background : -o-radial-gradient(top left, #EEE, #333 60%);*/
+  /*background : -ms-radial-gradient(top left, #EEE, #333 60%);*/
+  background : -moz-radial-gradient(top left, #EEE, #333 60%);
+  background : -webkit-radial-gradient(top left, #EEE, #333 60%);
+  animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;
+  /*-o-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;*/
+  /*-ms-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;*/
+  -moz-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;
+  -webkit-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;
+  box-shadow : 0 1em 1em #DDD;    
+}
+
+@keyframes bounce{
+  60%{
+    bottom : 0.5em;
+    height : 1.5em;
+    width : 1.5em;
+    box-shadow : 0 0.5em 0.6em #CCC;
+  }
+  to{
+    bottom : 0;
+    height : 1em;
+    width : 1.9em;
+    box-shadow : 0 0.6em 0.7em #CCC;
+  }
+}
+
+@-moz-keyframes bounce{
+  60%{
+    top : 0.5em;
+    height : 1.5em;
+    width : 1.5em;
+    box-shadow : 0 0.5em 0.6em #CCC;
+  }
+  to{
+    top : 1em;
+    height : 1em;
+    width : 1.9em;
+    box-shadow : 0 0.6em 0.7em #CCC;
+  }
+}
+@-webkit-keyframes bounce{
+  60%{
+    top : 0.5em;
+    height : 1.5em;
+    width : 1.5em;
+    box-shadow : 0 0.5em 0.6em #CCC;
+  }
+  to{
+    top : 1em;
+    height : 1em;
+    width : 1.9em;
+    box-shadow : 0 0.6em 0.7em #CCC;
+  }
+}
+
+/* ajax loader CSS3*/
+
+@-webkit-keyframes ajax-loader-rotate {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@-moz-keyframes ajax-loader-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes ajax-loader-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ajax-loader {
+  opacity: .8;
+  display: block;
+  border-radius: 50%;
+
+  font-size: 29px;
+  width: .25em;
+  height: .25em;
+
+  box-shadow:
+    0 -.4em       0 0 rgba(0,0,0,1),
+    -.28em -.28em 0 0 rgba(0,0,0,.75),
+    -.4em 0       0 0 rgba(0,0,0,.50),
+    -.28em .28em  0 0 rgba(0,0,0,.25)
+  ;
+
+  -webkit-animation: .85s ajax-loader-rotate steps(8) infinite;
+  -moz-animation: .85s ajax-loader-rotate steps(8) infinite;
+  animation: .85s ajax-loader-rotate steps(8) infinite;
+}
+
+/* loading CSS3*/
+.location {
+  width: 16px;
+  height: 35px;
+  position: relative;
+  font-size: 15px;
+}
+
+
+.location:before {
+  content: "";
+  width: .8em;
+  height: .8em;
+  border: .14em solid #999;
+  border-top: .14em solid transparent;
+  border-radius: 100%;
+  position: absolute;
+  right: 0;
+  top: .65em;
+  -webkit-transform: rotate(45deg);
+}
+
+.location:after {
+  content: "";
+  position: absolute;
+  border: .3em solid transparent;
+  border-left: .4em solid #999;
+  right: -.12em;
+  top: .5em;
+}
+
+/* profile CSS*/
+
+.profile {
+  font-size: 16px;
+  top: 0.5em;
+  border-radius: 0.7em 0.7em 0 0;
+  background: #CCC;
+  width: 1.5em;
+  height: 0.8em;
+  position: relative;
+}
+
+.profile:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #CCC;
+  top: -0.8em;
+  left: 0.38em;
+  width: 0.8em;
+  height: 0.85em;
+}
+
+/* profile CSS*/
+.star {
+  height: 0;
+  width: 0;
+  font-size: 10px;
+  position: relative;
+  border-left: 1.382em solid transparent;
+  border-right: 1.382em solid transparent;
+  border-top: 1em solid #2C2C2C;
+}
+
+.star::before {
+  left: -1.45em;
+  top: -1.04em;
+  content: '';
+  position: absolute;
+  border-left: 1.382em solid transparent;
+  border-right: 1.382em solid transparent;
+  border-top: 1em solid #2C2C2C;
+
+  -webkit-transform: rotate(72deg);
+  -moz-transform: rotate(72deg);
+  /*-o-transform: rotate(72deg);*/
+  /*-ms-transform: rotate(72deg);*/
+  transform: rotate(72deg);
+}
+
+.star::after {
+  left: -1.35em;
+  top: -1.04em;
+  content: '';
+  position: absolute;
+  border-left: 1.382em solid transparent;
+  border-right: 1.382em solid transparent;
+  border-top: 1em solid #2C2C2C;
+
+  -webkit-transform: rotate(-72deg);
+  -moz-transform: rotate(-72deg);
+ /* -o-transform: rotate(-72deg);
+ */ -ms-transform: rotate(-72deg);
+  transform: rotate(-72deg);
+}
+
+
+
+
