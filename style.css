@@ -27,7 +27,7 @@ header {
   /*-ms-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;*/
   -moz-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;
   -webkit-animation : bounce 0.5s cubic-bezier(0.3,0.6,1,0.5) alternate infinite;
-  box-shadow : 0 1em 1em #DDD;    
+  box-shadow : 0 1em 1em #DDD;
 }
 
 @keyframes bounce{
@@ -205,6 +205,69 @@ header {
  /* -o-transform: rotate(-72deg);
  */ -ms-transform: rotate(-72deg);
   transform: rotate(-72deg);
+}
+
+
+/**
+ * 三条线icon
+ * @name .thr-line
+ */
+.thr-line {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background: transparent;
+}
+.thr-line:before {
+  border-top: 2px solid #ccc;
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 10px;
+  margin: auto;
+  border-bottom: 2px solid #ccc;
+  top: 10px;
+  left: 7px;
+}
+.thr-line:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 16px;
+  width: 19px;
+  height: 2px;
+  background: #ccc;
+  left: 7px;
+}
+
+
+/**
+ * home icon
+ * @name .home
+ */
+
+.home {
+  height: 6px;
+  width: 2px;
+  margin:0 5px -2px 0;
+  border-bottom: none;
+  border-right: 7px solid #ccc;
+  border-left: 7px solid #ccc;
+  border-top: 3px solid #ccc;
+  position: relative;
+  display: inline-block;
+}
+
+.home::before {
+  border-left: 12px solid transparent;
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: -11px;
+  width: 0;
+  height: 0;
+  border-right: 12px solid transparent;
+  border-bottom: 7px solid #ccc;
 }
 
 
